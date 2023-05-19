@@ -1,6 +1,7 @@
-import { Oswald } from 'next/font/google'
+import { Comme } from 'next/font/google'
+import './index.css'
 
-const oswald = Oswald({
+const comme = Comme({
   subsets: ["latin"],
   weight: "400",
   display: "swap"
@@ -15,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>{children}</body>
+      <body className={comme.className}>{children}</body>
     </html>
   )
 }

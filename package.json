@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scss": "sass --watch src/scss/index.scss:src/app/index.css"
   },
   "dependencies": {
     "eslint": "8.40.0",
