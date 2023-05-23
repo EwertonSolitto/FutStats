@@ -3,4 +3,12 @@ body {
   color: #e3e3e3;
 }
 
+.login-form {
+  display: none;
+}
+
+.show-form {
+  display: block;
+}
+
 /*# sourceMappingURL=index.css.map */
