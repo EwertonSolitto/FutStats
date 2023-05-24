@@ -1,14 +1,14 @@
 @import './variables/colors.scss';
 
+@import './home/home.scss';
+
+* {
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: $background-color;
-  color: $font-color
-}
-
-.login-form {
-  display: none;
-}
-
-.show-form {
-  display: block;
+  color: $font-color;
 }

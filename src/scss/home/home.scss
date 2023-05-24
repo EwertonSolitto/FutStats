@@ -1,0 +1,61 @@
+#home {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+  }
+
+  #login-div {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mid-text {
+      font-size: 2rem;
+
+      a, a:visited {
+        color: $green;
+        text-decoration: none;
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+
+      input {
+        width: 37.5rem;
+        height: 2.875rem;
+        border-radius: 0.5rem;
+        font-size: 1.75rem;
+        color: $background-color;
+      }
+
+      button {
+        width: 37.5rem;
+        background-color: $green;
+        font-size: 1.75rem;
+        color: $background-color;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    
+        &:hover {
+          background-color: $light-green;
+    
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
