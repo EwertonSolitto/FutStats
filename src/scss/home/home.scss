@@ -25,20 +25,41 @@
       a, a:visited {
         color: $green;
         text-decoration: none;
+
+        &:hover {
+          color: $light-green;
+        }
       }
     }
 
     form {
       display: flex;
-      gap: 2rem;
+      gap: 0.5rem;
       flex-direction: column;
+
+      span {
+        font-size: 1.125rem;
+        padding-bottom: 1.5rem;
+        color: $red;
+      }
 
       input {
         width: 37.5rem;
         height: 2.875rem;
         border-radius: 0.5rem;
+        padding-inline:0.5rem ;
         font-size: 1.75rem;
         color: $background-color;
+        background-color: $font-color;
+
+        &:focus {
+          outline: 2px inset $light-green;
+        }
+
+        &.invalid,
+        &.invalid:focus {
+          outline: 2px inset $red;
+        }
       }
 
       button {

@@ -1,6 +1,5 @@
-'use client'
-
 export default async function getAuthentication(key) {
+  const url = 'https://api-football-v1.p.rapidapi.com/leagues'
   const options = {
     method: 'GET',
     headers: {
@@ -9,6 +8,6 @@ export default async function getAuthentication(key) {
     }
   };
 
-    const res = await fetch('https://api-football-v1.p.rapidapi.com/leagues', options);
+    const res = await fetch(url, options);
     return res.json()
 }

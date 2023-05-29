@@ -6,17 +6,21 @@ import getAuthentication from './API/authentication';
 
 export default function LoginForm() {
   const [username, setUsername] = useState('');
+  const [invalid, setInvalid] = useState('')
 
   async function handleLogin(e) {
     e.preventDefault();
+    e.target[1].disabled = true
 
     const key = await getAuthentication(e.target[0].value)
 
-    console.log(key)
-
     if (key.message === undefined) {
-      window.location.href =  '/main'; 
+      return window.location.href =  '/main'; 
     }
+
+    e.target[0].className = 'invalid'
+    setInvalid('key inválida')
+    e.target[1].disabled = false
   }
 
   return (
@@ -42,8 +46,10 @@ export default function LoginForm() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
+              autoComplete='off'
             />
           </label>
+          <span>{invalid}</span>
           <button type="submit">Entrar</button>
         </form>
         <p className='mid-text'>Ainda não tem sua <strong>Key</strong>? <a href=''>CLIQUE AQUI</a></p>
