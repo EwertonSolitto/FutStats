@@ -1,8 +1,11 @@
 'use client'
+
 import { useState } from 'react';
+
 import Player from '../../public/player.png'
 import Image from 'next/image';
-import getAuthentication from './API/authentication';
+
+import apiFootball from './API/apiFootball';
 
 export default function LoginForm() {
   const [username, setUsername] = useState('');
@@ -12,7 +15,7 @@ export default function LoginForm() {
     e.preventDefault();
     e.target[1].disabled = true
 
-    const key = await getAuthentication(e.target[0].value)
+    const key = await apiFootball(e.target[0].value, 'leagues')
 
     if (key.message === undefined) {
       return window.location.href =  '/main'; 
