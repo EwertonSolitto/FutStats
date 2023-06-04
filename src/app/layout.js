@@ -1,5 +1,6 @@
 import { Comme } from 'next/font/google'
-import './index.css'
+import "../scss/index.scss"
+import Header from './components/Header'
 
 const comme = Comme({
   subsets: ["latin"],
@@ -8,7 +9,7 @@ const comme = Comme({
 }) 
 
 export const metadata = {
-  title: 'Football API',
+  title: 'FutStats',
 }
 
 export default async function RootLayout({ children }) {
